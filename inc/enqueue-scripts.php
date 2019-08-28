@@ -23,13 +23,13 @@ function add_files()
 	/*
 	 * cssにタイムスタンプを付与する。
 	 */
-	wp_css('wordpress_template-style', '/style.css');
+	wp_css('sunfine_template-style', '/style.css');
 
 	/*
 	 *  jsにタイムスタンプを付与する。
 	 */
-	wp_script('wordpress_template-navigation', '/assets/js/navigation.min.js');
-	wp_script('wordpress_template-skip-link-focus-fix', '/assets/js/skip-link-focus-fix.min.js');
+	wp_script('sunfine_template-navigation', '/assets/js/navigation.min.js');
+	wp_script('sunfine_template-skip-link-focus-fix', '/assets/js/skip-link-focus-fix.min.js');
 
 	/*
 	 * JS圧縮ファイル

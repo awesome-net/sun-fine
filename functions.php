@@ -1,13 +1,13 @@
 <?php
 /**
- * wordpress_template functions and definitions
+ * sunfine_template functions and definitions
  *
  * @link    https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package wordpress_template
+ * @package sunfine_template
  */
 
-if ( ! function_exists('wordpress_template_setup')) :
+if ( ! function_exists('sunfine_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,15 +15,15 @@ if ( ! function_exists('wordpress_template_setup')) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function wordpress_template_setup()
+	function sunfine_setup()
 	{
 		/*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
-         * If you're building a theme based on wordpress_template, use a find and replace
-         * to change 'wordpress_template' to the name of your theme in all the template files.
+         * If you're building a theme based on sunfine_template, use a find and replace
+         * to change 'sunfine_template' to the name of your theme in all the template files.
          */
-		load_theme_textdomain('wordpress_template', get_template_directory() . '/languages');
+		load_theme_textdomain('sunfine_template', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support('automatic-feed-links');
@@ -45,7 +45,7 @@ if ( ! function_exists('wordpress_template_setup')) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(array(
-			'menu-1' => esc_html__('Primary', 'wordpress_template'),
+			'menu-1' => esc_html__('Primary', 'sunfine_template'),
 		));
 
 		/*
@@ -61,7 +61,7 @@ if ( ! function_exists('wordpress_template_setup')) :
 		));
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support('custom-background', apply_filters('wordpress_template_custom_background_args', array(
+		add_theme_support('custom-background', apply_filters('sunfine_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		)));
@@ -82,7 +82,7 @@ if ( ! function_exists('wordpress_template_setup')) :
 		));
 	}
 endif;
-add_action('after_setup_theme', 'wordpress_template_setup');
+add_action('after_setup_theme', 'sunfine_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -91,12 +91,12 @@ add_action('after_setup_theme', 'wordpress_template_setup');
  *
  * @global int $content_width
  */
-function wordpress_template_content_width()
+function sunfine_content_width()
 {
-	$GLOBALS['content_width'] = apply_filters('wordpress_template_content_width', 640);
+	$GLOBALS['content_width'] = apply_filters('sunfine_content_width', 640);
 }
 
-add_action('after_setup_theme', 'wordpress_template_content_width', 0);
+add_action('after_setup_theme', 'sunfine_content_width', 0);
 
 
 /**

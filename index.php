@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package wordpress_template
+ * @package sunfine_template
  */
 
 get_header(); ?>

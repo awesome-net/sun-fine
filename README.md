@@ -1,4 +1,4 @@
-# manno wordpress starter theme
+# sunfine starter theme
 ## 前提条件
 `npm`がインストールされていることが条件となります。
 

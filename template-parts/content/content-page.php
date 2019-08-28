@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package wordpress_template
+ * @package sunfine_template
  */
 
 ?>
@@ -19,7 +19,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wordpress_template' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sunfine_template' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -32,7 +32,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'wordpress_template' ),
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'sunfine_template' ),
 							array(
 								'span' => array(
 									'class' => array(),

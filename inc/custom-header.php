@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package wordpress_template
+ * @package sunfine_template
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses wordpress_template_header_style()
+ * @uses sunfine_header_style()
  */
-function wordpress_template_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'wordpress_template_custom_header_args', array(
+function sunfine_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'sunfine_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'wordpress_template_header_style',
+		'wp-head-callback'       => 'sunfine_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'wordpress_template_custom_header_setup' );
+add_action( 'after_setup_theme', 'sunfine_custom_header_setup' );
 
-if ( ! function_exists( 'wordpress_template_header_style' ) ) :
+if ( ! function_exists( 'sunfine_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see wordpress_template_custom_header_setup().
+	 * @see sunfine_custom_header_setup().
 	 */
-	function wordpress_template_header_style() {
+	function sunfine_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

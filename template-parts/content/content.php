@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package wordpress_template
+ * @package sunfine_template
  */
 
 ?>
@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php wordpress_template_posted_on(); ?>
+			<?php sunfine_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -31,7 +31,7 @@
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wordpress_template' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'sunfine_template' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -42,13 +42,13 @@
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wordpress_template' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sunfine_template' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php wordpress_template_entry_footer(); ?>
+		<?php sunfine_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
