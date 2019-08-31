@@ -23,6 +23,40 @@
 //
 //}
 
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page(array( // 親ページ
+	'page_title' 	=> '共通オプション設定', // ページタイトル
+	'menu_title'	=> '共通オプション', // メニュータイトル
+	'menu_slug' 	=> 'theme-general-settings', // メニュースラッグ
+	'capability'	=> 'edit_posts',
+	'redirect'		=> false
+));
+  acf_add_options_sub_page(array( // 子ページ
+	'page_title' 	=> 'ヘッダー設定', // ページタイトル
+	'menu_title'	=> 'ヘッダー', // メニュータイトル
+	'menu_slug' 	=> 'theme-options-header',
+	'capability'	=> 'edit_posts',
+	'parent_slug'	=> 'theme-general-settings', // 親メニューのスラッグ
+	'position'	=> false,
+));
+  acf_add_options_sub_page(array( // 子ページ
+	'page_title' 	=> 'フッター設定', // ページタイトル
+	'menu_title'	=> 'フッター', // メニュータイトル
+	'menu_slug' 	=> 'theme-options-footer',
+	'capability'	=> 'edit_posts',
+	'parent_slug'	=> 'theme-general-settings', // 親メニューのスラッグ
+	'position'	=> false,
+));
+  acf_add_options_sub_page(array( // 子ページ
+	'page_title' 	=> 'サービス設定', // ページタイトル
+	'menu_title'	=> 'サービス', // メニュータイトル
+	'menu_slug' 	=> 'theme-options-service',
+	'capability'	=> 'edit_posts',
+	'parent_slug'	=> 'theme-general-settings', // 親メニューのスラッグ
+	'position'	=> false,
+));
+}
+
 /**
  * ACF JSON 保存先
  */

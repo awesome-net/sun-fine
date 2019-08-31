@@ -9,7 +9,7 @@
 		</div>
 		<?php
 		$defaults = array(
-			'menu'            => 'ヘッダーメニュー',
+			'menu'            => '',
 			'container'       => 'div',
 			'container_class' => 'list-group',
 			'fallback_cb'     => 'wp_page_menu',
