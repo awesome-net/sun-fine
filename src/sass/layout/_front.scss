@@ -1,0 +1,83 @@
+/*
+top-hero
+*/
+.top-hero{
+	position: relative;
+	background-image: url('./assets/img/home/hero/top-banner@2x.png');
+	background-repeat: no-repeat;
+	@include media-breakpoint-up(lg){
+		@include width-center(lg);
+		height: 768px;
+		background-size: contain;
+	}
+	@media (min-width: 1366px) {
+		width: 100%!important;
+		background-size: cover;
+	}
+	&__title{
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			top: 50px;
+			left: 137px;
+		}
+	}
+	&__menu{
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			top: 120px;
+			left: 137px;
+		}
+		ul{
+			@extend .m-0;
+			@extend .p-0;
+			@include ff-gmintyo-sb;
+			font-size: $fs-base;
+			li{
+				list-style-type: none;
+				border-bottom: 1px solid #FFF;
+				@include media-breakpoint-up(lg){
+					padding: 20px 0;
+					width: 170px;
+				}
+				a{
+					color: #FFF;
+					line-height: 20px;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&__info{
+		@extend .d-lg-flex;
+		@extend .flex-lg-row-reverse;
+		@extend .m-0;
+		@extend .p-0;
+		padding-left: 20px!important;
+		color: #FFF;
+		@include ff-gmintyo-m;
+		font-size: $fs-base;
+		border-left: 1px solid #FFF;
+		letter-spacing: 2.1px;
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			top: 497px;
+			right: 156px;
+		}
+		li{
+			-webkit-writing-mode: vertical-rl;
+			-ms-writing-mode: tb-rl;
+			writing-mode: vertical-rl;
+			list-style-type: none;
+		}
+	}
+	&__copyright{
+		@include ff-gmintyo-m;
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			bottom: 15px;
+			right: 138px;
+			color: #FFF;
+			font-size: $fs-xs;
+		}
+	}
+}

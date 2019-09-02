@@ -69,3 +69,48 @@ object-fit
   font-family: 'object-fit: #{$properties};';
   /* stylelint-enable */
 }
+
+/*
+width-center
+ */
+@mixin width-center($type) {
+	@if $type == lg {
+		width: $base-width!important;
+	} @else {
+		width: 100%;
+	}
+	margin: 0 auto!important;
+}
+
+
+/*
+font-family
+ */
+ // font-familyの設定をmixin化
+ // 源ノ明朝,Medium
+ @mixin ff-gmintyo-m{
+	font-family: source-han-serif-japanese,serif;
+	font-weight: 500;
+	font-style: normal;
+ }
+
+ // 源ノ明朝,SemiBold
+ @mixin ff-gmintyo-sb{
+	font-family: source-han-serif-japanese,serif;
+	font-weight: 600;
+	font-style: normal;
+ }
+
+ // 源ノ明朝,Bold
+ @mixin ff-gmintyo-b{
+	font-family: source-han-serif-japanese,serif;
+	font-weight: 700;
+	font-style: normal;
+ }
+
+ // 源ノ明朝,Heavy
+ @mixin ff-gmintyo-h{
+	font-family: source-han-serif-japanese,serif;
+	font-weight: 900;
+	font-style: normal;
+ }

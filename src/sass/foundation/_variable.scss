@@ -4,11 +4,12 @@
 
 // font-size
 
+$fs-xs: 10px;
 $fs-base: 14px;
 $fs-md: 16px;
-$fs-lg: 23px;
-$fs-xl: 28px;
-$fs-xxl: 32px;
+$fs-lg: 20px;
+$fs-xl: 26px;
+$fs-xxl: 28px;
 
 // base-color
 
@@ -17,7 +18,7 @@ $fb-blue: #3B5998;
 $line-green: #00BB00;
 
 // window max size
-$base-width: 1240px;
+$base-width: 1366px;
 
 // transition
 $transition-base: all .2s ease-in-out;
