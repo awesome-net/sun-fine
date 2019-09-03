@@ -149,3 +149,9 @@ require get_template_directory() . '/inc/widget-init.php';
  */
 
 //require get_template_directory() . '/inc/custom-posts.php';
+
+
+function remove_wysiwyg() {
+    remove_post_type_support( 'page', 'editor' );
+}
+add_action( 'init' , 'remove_wysiwyg' );

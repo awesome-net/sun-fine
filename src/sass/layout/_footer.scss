@@ -3,6 +3,7 @@ l-footer
  */
  .l-footer{
  	background: #000;
+ 	position: relative;
  	@include media-breakpoint-up(lg){
  		@include width-center(lg);
  	}
@@ -40,20 +41,79 @@ l-footer
  		@include media-breakpoint-up(lg){
  			height: 280px;
  		}
+ 		&-info{
+ 			color: #FFF;
+ 			@include ff-gmintyo-sb;
+ 			@include media-breakpoint-up(lg){
+ 				position: absolute;
+ 				top: 50px;
+ 				left: 137px;
+ 			}
+ 			&--address{
+ 				margin-top: 25px;
+ 				font-size: 12px;
+ 			}
+ 			&--tel{
+ 				font-size: 34px;
+ 				span{
+ 					font-size: 12px;
+ 					margin-right: 8px;
+ 				}
+ 			}
+ 		}
  		&-menu{
  			@include media-breakpoint-up(lg){
  				position: absolute;
  				top: 33px;
- 				right: 137px;
+ 				right: 125px;
  			}
  			ul{
+ 				@extend .m-0;
+ 				@extend .p-0;
  				@extend .d-lg-flex;
+ 				@include ff-gmintyo-sb;
+ 				font-size: $fs-base;
  				li{
- 					-webkit-writing-mode: vertical-rl;
- 					-ms-writing-mode: tb-rl;
- 					writing-mode: vertical-rl;
+ 					@include media-breakpoint-up(lg){
+ 						-webkit-writing-mode: vertical-rl;
+ 						-ms-writing-mode: tb-rl;
+ 						writing-mode: vertical-rl;
+ 						list-style-type: square;
+ 						-webkit-text-orientation: upright;
+ 						text-orientation: upright;
+ 						color: #FFF;
+ 						margin-right: 12px;
+ 					}
+ 					&:nth-child(3){
+ 						.sub-menu{
+ 							@extend .d-lg-block;
+ 							li{
+ 								list-style-type: none;
+ 								&:before{
+ 									content: '―';
+ 									color: #B1B1B1;
+ 								}
+ 							}
+ 							a{
+ 								color: #B1B1B1;
+ 							}
+ 						}
+ 					}
+ 					a{
+ 						color: #FFF;
+ 					}
  				}
  			}
+ 		}
+ 	}
+ 	&__copyright{
+ 		@include media-breakpoint-up(lg){
+ 			position: absolute;
+ 			bottom: 15px;
+ 			right: 137px;
+ 			@include ff-gmintyo-m;
+ 			color: #FFF;
+ 			font-size: $fs-xs;
  		}
  	}
  }

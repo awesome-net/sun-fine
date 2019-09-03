@@ -27,23 +27,71 @@ top-hero
 			top: 120px;
 			left: 137px;
 		}
-		ul{
-			@extend .m-0;
-			@extend .p-0;
+
+		ul {
+			@extend .u-mp-0;
+		}
+
+		li {
+			list-style: none;
+			a {
+				text-decoration: none;
+			}
+		}
+
+		.list-group > ul{
 			@include ff-gmintyo-sb;
 			font-size: $fs-base;
-			li{
+			> li{
 				list-style-type: none;
 				border-bottom: 1px solid #FFF;
 				@include media-breakpoint-up(lg){
 					padding: 20px 0;
 					width: 170px;
 				}
-				a{
+				> a{
 					color: #FFF;
 					line-height: 20px;
 					text-decoration: none;
 				}
+			}
+		}
+		.sub-menu{
+			display: none;
+			position: absolute;
+		}
+		.menu-item-has-children {
+			.sub-menu{
+				display: block;
+				border-bottom: 1px solid #FFF;
+				padding-left: 25px!important;
+
+				// 通常時は透明にし背景の下に隠す。
+				opacity: 0;
+				transition: .5s;
+				transition-delay: .3s;
+				z-index: -1;
+				transform: translate(130px, -73px);
+				li{
+					@include media-breakpoint-up(lg){
+						padding: 5px 0;
+						width: 170px;
+					}
+				}
+			}
+
+			// ホバー時のアニメーション
+			&:hover .sub-menu {
+				z-index: 1;
+				opacity: 1;
+				transition: .5s;
+				transition-delay: .3s;
+				transform: translate(170px, -73px);
+			}
+			a{
+				color: #FFF;
+				line-height: 20px;
+				text-decoration: none;
 			}
 		}
 	}

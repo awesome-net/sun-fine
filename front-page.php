@@ -18,9 +18,8 @@ get_header(); ?>
 	<main id="main" class="site-main">
 
 		<section class="top-hero">
-
 			<div class="top-hero__title">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/" alt="タイトル画像：サンファイン">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/top-banner-logo.svg" alt="タイトル画像：サンファイン">
 			</div>
 
 			<div class="top-hero__menu">
@@ -45,9 +44,25 @@ get_header(); ?>
 			<?php
 			$hero_copyright        = get_field('copyright', 'options');
 			?>
-			<div class="top-hero_copyright">
+			<div class="top-hero__copyright">
 				<?php echo $hero_copyright; ?>
 			</div>
+		</section>
+
+		<section class="top-about">
+			<h2>サンファインとは</h2>
+			<ul>
+				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
+				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
+				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
+				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
+				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
+			</ul>
+			<?php get_template_part('template-parts/object/about', 'slider'); ?>
+		</section>
+
+		<section class="top-business">
+			<h2>業務内容</h2>
 		</section>
 
 	</main><!-- #main -->
