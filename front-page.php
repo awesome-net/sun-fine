@@ -51,18 +51,36 @@ get_header(); ?>
 
 		<section class="top-about">
 			<h2>サンファインとは</h2>
-			<ul>
-				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
-				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
-				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
-				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
-				<li>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</li>
-			</ul>
+			<?php get_template_part('template-parts/object/about', 'list'); ?>
 			<?php get_template_part('template-parts/object/about', 'slider'); ?>
 		</section>
 
 		<section class="top-business">
 			<h2>業務内容</h2>
+			<?php get_template_part('template-parts/object/business', 'list'); ?>
+		</section>
+
+		<section class="top-blog">
+			<h2>修整例</h2>
+			<div class="top-blog__list">
+				<?php
+				$args = array(
+					'post_type'      => 'post',
+					'posts_per_page' => '3',
+					'no_found_rows'  => true,  //ページャーを使う時はfalseに。
+				);
+
+				$the_query = new WP_Query($args);
+				if ($the_query->have_posts()) :
+					while ($the_query->have_posts()) : $the_query->the_post();
+						get_template_part('template-parts/content/content', get_post_format());
+
+					endwhile;
+				endif;
+				wp_reset_postdata();
+				?>
+			</div>
+			<div class="top-blog__more"><a href="/blog/" target="" class="top-blog__button-cont">もっとみる</a></div>
 		</section>
 
 	</main><!-- #main -->

@@ -10,45 +10,38 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+	<a href="<?php the_permalink(); ?>">
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php sunfine_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+		<header class="entry-header">
+			<!--画像を追加-->
+			<?php if( has_post_thumbnail() ): ?>
+				<?php the_post_thumbnail('thumbnail'); ?>
+			<?php else: ?>
+				<?php $upload_dir = wp_upload_dir(); ?>
+				<img src="<?php echo $upload_dir['baseurl']; ?>/2012/01/top-blog-img-noimage.svg" alt="no-img"/>
+			<?php endif; ?>
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'sunfine_template' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+			<?php
+			if ( is_front_page() ) :
+				the_title( '<h3 class="entry-title">', '</h3>' );
+			elseif ( is_singular() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
+			?>
+		</header><!-- .entry-header -->
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sunfine_template' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php sunfine_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		<div class="entry-content">
+			<?php
+			$content = get_the_content('…'); // 投稿テキストを取得する
+			$content = wp_strip_all_tags( $content ); // HTMLタグをすべて取り除く
+			$content = strip_shortcodes( $content ); // ショートコードを取り除く
+			if(mb_strlen($content, 'UTF-8') > 125){
+				$content = mb_substr($content, 0, 125);
+			}
+			echo $content;
+			?>
+		</div><!-- .entry-content -->
+	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
