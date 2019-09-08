@@ -1,4 +1,4 @@
-<nav class="c-nav__pc">
+<nav class="c-nav__pc order-1">
 	<?php
 	$defaults = array(
 		'menu'            => 'ヘッダーメニュー',

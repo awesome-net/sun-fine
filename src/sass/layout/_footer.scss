@@ -11,12 +11,16 @@ l-footer
  		width: 100%!important;
  	}
  	&__link{
- 		@extend .d-lg-flex;
- 		@extend .justify-content-lg-between;
- 		padding: 40px 310px;
+ 		@extend .d-md-flex;
+ 		@extend .justify-content-md-center;
+ 		padding: 40px 0;
  		@include ff-gmintyo-sb;
- 		@include media-breakpoint-up(lg){
+ 		@include media-breakpoint-up(md){
  			font-size: $fs-lg;
+ 		}
+ 		@include media-breakpoint-down(xs){
+ 			padding: 16px 12px;
+ 			font-size: 18px;
  		}
  		a{
  			color: #FFF;
@@ -24,22 +28,40 @@ l-footer
  			text-align: center;
  			text-decoration: none;
  			@include media-breakpoint-up(lg){
+ 				margin: 0 20px;
  				padding: 20px 0;
  				width: 355px;
  			}
+ 			@include media-breakpoint-down(md){
+ 				margin: 0 10px;
+ 				padding: 20px 0;
+ 				width: 340px;
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				display: block;
+ 				margin: 20px 0;
+ 				width: auto;
+ 			}
  			&:hover{
- 				background: #B2DBF7;
- 				color: #09324E;
- 				border: 1px solid #43A7EB;
+ 				background: #FFF;
+ 				color: #000;
+ 				border: 1px solid #FFF;
  			}
  		}
  	}
  	&__cont{
- 		@extend .m-0;
- 		@extend .p-0;
  		position: relative;
  		@include media-breakpoint-up(lg){
  			height: 280px;
+ 		}
+ 		@include media-breakpoint-down(md){
+ 			padding: 54px 124px 20px;
+ 			text-align: center;
+ 			height: 500px;
+ 		}
+ 		@include media-breakpoint-down(xs){
+ 			padding: 47px 12px 20px;
+ 			height: 500px;
  		}
  		&-info{
  			color: #FFF;
@@ -49,15 +71,51 @@ l-footer
  				top: 50px;
  				left: 137px;
  			}
+ 			img{
+ 				@include media-breakpoint-down(md){
+ 					width: 200px;
+ 					margin-bottom: 70px;
+ 				}
+ 				@include media-breakpoint-down(xs){
+ 					width: 194px;
+ 					margin-bottom: 50px;
+ 				}
+ 			}
  			&--address{
- 				margin-top: 25px;
- 				font-size: 12px;
+ 				@include media-breakpoint-up(lg){
+ 					margin-top: 25px;
+ 					font-size: 12px;
+ 				}
+ 				@include media-breakpoint-down(md){
+ 					font-size: $fs-base;
+ 				}
+ 				@include media-breakpoint-down(xs){
+ 					font-size: 12px;
+ 				}
  			}
  			&--tel{
- 				font-size: 34px;
+ 				@include media-breakpoint-up(lg){
+ 					font-size: 34px;
+ 				}
+ 				@include media-breakpoint-down(md){
+ 					font-size: 39px;
+ 				}
+ 				@include media-breakpoint-down(xs){
+ 					font-size: 35px;
+ 				}
  				span{
- 					font-size: 12px;
- 					margin-right: 8px;
+ 					@include media-breakpoint-up(lg){
+ 						font-size: 12px;
+ 						margin-right: 8px;
+ 					}
+ 					@include media-breakpoint-down(md){
+ 						font-size: $fs-base;
+ 						margin-right: 12px;
+ 					}
+ 					@include media-breakpoint-down(xs){
+ 						font-size: 12px;
+ 						margin-right: 8px;
+ 					}
  				}
  			}
  		}
@@ -67,26 +125,46 @@ l-footer
  				top: 33px;
  				right: 125px;
  			}
+ 			@include media-breakpoint-down(md){
+ 				position: absolute;
+ 				top: 300px;
+ 				left: 50%;
+				transform: translate(-50%, 0%);
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				top: 280px;
+ 				left: 50%;
+				transform: translate(-50%, 0%);
+ 			}
  			ul{
  				@extend .m-0;
  				@extend .p-0;
- 				@extend .d-lg-flex;
+ 				@extend .d-flex;
  				@include ff-gmintyo-sb;
- 				font-size: $fs-base;
  				li{
+ 					-webkit-writing-mode: vertical-rl;
+ 					-ms-writing-mode: tb-rl;
+ 					writing-mode: vertical-rl;
+ 					list-style-type: square;
+ 					-webkit-text-orientation: upright;
+ 					text-orientation: upright;
+ 					color: #FFF;
+ 					text-align: left;
  					@include media-breakpoint-up(lg){
- 						-webkit-writing-mode: vertical-rl;
- 						-ms-writing-mode: tb-rl;
- 						writing-mode: vertical-rl;
- 						list-style-type: square;
- 						-webkit-text-orientation: upright;
- 						text-orientation: upright;
- 						color: #FFF;
  						margin-right: 12px;
+ 						font-size: $fs-base;
+ 					}
+ 					@include media-breakpoint-down(md){
+ 						margin-right: 30px;
+ 						font-size: $fs-md;
+ 					}
+ 					@include media-breakpoint-down(xs){
+ 						margin-right: 12px;
+ 						font-size: 12px;
  					}
  					&:nth-child(3){
  						.sub-menu{
- 							@extend .d-lg-block;
+ 							@extend .d-block;
  							li{
  								list-style-type: none;
  								&:before{
@@ -107,12 +185,20 @@ l-footer
  		}
  	}
  	&__copyright{
+ 		@include ff-gmintyo-m;
+ 		color: #FFF;
  		@include media-breakpoint-up(lg){
  			position: absolute;
  			bottom: 15px;
  			right: 137px;
- 			@include ff-gmintyo-m;
- 			color: #FFF;
+ 			font-size: $fs-xs;
+ 		}
+ 		@include media-breakpoint-down(md){
+ 			padding-bottom: 20px;
+ 			text-align: center;
+ 			font-size: 12px;
+ 		}
+ 		@include media-breakpoint-down(xs){
  			font-size: $fs-xs;
  		}
  	}

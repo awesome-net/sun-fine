@@ -24,7 +24,7 @@
 
 	<div class="l-footer__cont">
 		<div class="l-footer__cont-info">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/top-banner-logo.svg" alt="タイトル画像：サンファイン">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer/footer-logo.svg" alt="タイトル画像：サンファイン">
 			<div class="l-footer__cont-info--address">
 				〒675-0112 兵庫県加古川市平岡町山之上６１１
 			</div>

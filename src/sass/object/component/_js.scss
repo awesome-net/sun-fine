@@ -6,7 +6,17 @@
 js-about__slider
 */
 .js-about__slider{
-	width: 480px;
+	@include media-breakpoint-up(lg){
+		width: 480px;
+	}
+	@include media-breakpoint-down(md){
+		margin-right: 10px;
+		width: 320px;
+	}
+	@include media-breakpoint-down(xs){
+		margin: 35px 0 40px;
+		width: 100%;
+	}
 	.slick-dots{
 		position: relative;
 		bottom: 0;
@@ -15,6 +25,10 @@ js-about__slider
 				padding: 0;
 				width: 15px;
 				height: 15px;
+				@include media-breakpoint-down(xs){
+					width: 13px;
+					height: 13px;
+				}
 				&:before{
 					content: '';
 					background: #EBEBEB;
@@ -25,10 +39,19 @@ js-about__slider
 					@include media-breakpoint-down(md){
 						font-size: $fs-md;
 					}
+					@include media-breakpoint-down(xs){
+						width: 13px;
+						height: 13px;
+					}
 				}
 			}
 			&:nth-child(2){
-				margin: 0 20px!important;
+				@include media-breakpoint-up(md){
+					margin: 0 18px!important;
+				}
+				@include media-breakpoint-down(xs){
+					margin: 0 13px!important;
+				}
 			}
 		}
 		.slick-active{
@@ -45,19 +68,126 @@ js-about__slider
 ハンバーガーメニュー
  */
  .js-offcanvas-btn {
+ 	margin: 0;
+ 	border: none;
+ 	background: none;
+ 	position: absolute;
+ 	padding: 0;
+ 	z-index: 9999;
+ 	@include media-breakpoint-down(md){
+ 		left: 32px;
+ 		top: 50px;
+ 		width: 50px;
+ 		height: 50px;
+ 		background: #FFF;
+ 		opacity: 0.6;
+ 		padding: 10px;
+ 	}
+ 	@include media-breakpoint-down(xs){
+ 		left: 12px;
+ 		top: 24px;
+ 		width: 41px;
+ 		height: 41px;
+ 		background: #FFF;
+ 		opacity: 0.6;
+ 		padding: 10px;
+ 	}
+ 	.hiraku-open-btn-line{
+ 		width: 100%;
+ 		height: 2px;
+ 		background: #000;
+ 		&:before{
+ 			height: 2px;
+ 			width: 100%;
+ 			background: #000;
+ 			@include media-breakpoint-down(md){
+ 				top: -9px;
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				top: -7px;
+ 			}
+ 		}
+ 		&:after{
+ 			height: 2px;
+ 			width: 100%;
+ 			background: #000;
+ 			@include media-breakpoint-down(md){
+ 				bottom: -9px;
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				bottom: -7px;
+ 			}
+ 		}
+ 	}
+ }
+
+ [aria-expanded="true"] .hiraku-open-btn-line:before {
+ 	@include media-breakpoint-down(md){
+ 		transform: translate(-2px, 12px) rotate(45deg);
+ 	}
+ 	@include media-breakpoint-down(xs){
+ 		transform: translate(-2px, 8px) rotate(45deg);
+ 	}
+ }
+
+ .js-hiraku-offcanvas-btn-active{
+ 	position: absolute;
+ 	@include media-breakpoint-down(md){
+ 		left: 32px;
+ 		top: 50px;
+ 	}
+ 	@include media-breakpoint-down(xs){
+ 		left: 12px;
+ 		top: 24px;
+ 	}
+ 	.hiraku-open-btn-line{
+ 		background: #FFF;
+ 	}
+ 	.hiraku-open-btn-line:before,
+ 	.hiraku-open-btn-line:after{
+ 		background-color: #FFF;
+ 		width: 100%;
+ 		background: #000;
+ 		left: 2px;
+ 	}
  }
 
  .js-hiraku-offcanvas-active .js-hiraku-offcanvas-sidebar {
+ 	background: #000;
  	@include link_color(black) {
  		text-decoration: none;
  		display: block;
- 		width: 100%;
+ 		@include media-breakpoint-down(md){
+ 			width: 40%;
+ 		}
+ 		@include media-breakpoint-down(xs){
+ 			width: 70%;
+ 		}
  	}
  	ul {
  		margin: 0;
  		padding: 2rem;
  		li {
+ 			margin: 0;
  		}
+ 	}
+ }
+
+ .js-hiraku-offcanvas-body-left {
+ 	@include media-breakpoint-down(md){
+ 		left: 40%;
+ 	}
+ }
+
+ .js-hiraku-offcanvas-active .js-hiraku-offcanvas-sidebar-left {
+ 	@include media-breakpoint-down(md){
+ 		margin-right: -40%;
+ 	}
+ }
+
+ .js-hiraku-offcanvas-body-left .js-hiraku-header-fixed {
+ 	@include media-breakpoint-down(md){
+ 		margin-left: -40%;
  	}
  }
 

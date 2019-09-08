@@ -19,7 +19,9 @@ get_header(); ?>
 
 		<section class="top-hero">
 			<div class="top-hero__title">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/top-banner-logo.svg" alt="タイトル画像：サンファイン">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/top-banner-logo.svg" alt="タイトル画像：サンファイン" class="top-hero__title-pc">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/tb-top-banner-logo.svg" alt="タイトル画像：サンファイン" class="top-hero__title-tb">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/sp-top-banner-logo.svg" alt="タイトル画像：サンファイン" class="top-hero__title-sp">
 			</div>
 
 			<div class="top-hero__menu">
