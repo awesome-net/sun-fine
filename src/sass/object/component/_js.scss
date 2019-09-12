@@ -88,9 +88,6 @@ js-about__slider
  		top: 24px;
  		width: 41px;
  		height: 41px;
- 		background: #FFF;
- 		opacity: 0.6;
- 		padding: 10px;
  	}
  	.hiraku-open-btn-line{
  		width: 100%;
@@ -121,6 +118,19 @@ js-about__slider
  	}
  }
 
+.page-template{
+ 	.js-offcanvas-btn {
+ 		@include media-breakpoint-down(md){
+ 			left: 32px;
+ 			top: 10px;
+ 		}
+ 		@include media-breakpoint-down(xs){
+ 			top: 15px;
+ 			left: 12px;
+ 		}
+ 	}
+ }
+
  [aria-expanded="true"] .hiraku-open-btn-line:before {
  	@include media-breakpoint-down(md){
  		transform: translate(-2px, 12px) rotate(45deg);
@@ -131,14 +141,8 @@ js-about__slider
  }
 
  .js-hiraku-offcanvas-btn-active{
- 	position: absolute;
- 	@include media-breakpoint-down(md){
- 		left: 32px;
- 		top: 50px;
- 	}
  	@include media-breakpoint-down(xs){
- 		left: 12px;
- 		top: 24px;
+ 		left: 130px!important;
  	}
  	.hiraku-open-btn-line{
  		background: #FFF;

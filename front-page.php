@@ -25,7 +25,7 @@ get_header(); ?>
 			</div>
 
 			<div class="top-hero__menu">
-				<?php get_template_part('template-parts/object/hero-nav','pc'); ?>
+				<?php get_template_part('template-parts/object/home/hero-nav','pc'); ?>
 			</div>
 
 			<?php
@@ -53,13 +53,13 @@ get_header(); ?>
 
 		<section class="top-about">
 			<h2>サンファインとは</h2>
-			<?php get_template_part('template-parts/object/about', 'list'); ?>
-			<?php get_template_part('template-parts/object/about', 'slider'); ?>
+			<?php get_template_part('template-parts/object/home/about', 'list'); ?>
+			<?php get_template_part('template-parts/object/home/about', 'slider'); ?>
 		</section>
 
 		<section class="top-business">
 			<h2>業務内容</h2>
-			<?php get_template_part('template-parts/object/business', 'list'); ?>
+			<?php get_template_part('template-parts/object/home/business', 'list'); ?>
 		</section>
 
 		<section class="top-blog">
@@ -82,7 +82,7 @@ get_header(); ?>
 				wp_reset_postdata();
 				?>
 			</div>
-			<div class="top-blog__more"><a href="/blog/" target="" class="top-blog__button-cont">もっとみる</a></div>
+			<div class="top-blog__more"><a href="<?php echo home_url('/blog/'); ?>" target="" class="top-blog__button-cont">もっとみる</a></div>
 		</section>
 
 	</main><!-- #main -->

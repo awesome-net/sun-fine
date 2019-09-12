@@ -40,6 +40,11 @@ Theme Sass file
 @import "layout/front";
 // project
 @import "object/project/project";
+@import "object/project/business";
+@import "object/project/repair";
+@import "object/project/step";
+@import "object/project/company";
+
 
 // safariのカラム落ち対策
 .row {

@@ -14,8 +14,8 @@
 
 <footer class="l-footer">
 	<div class="l-footer__link">
-		<a href="/step/">お取引の流れ</a>
-		<a href="/contact/">お問い合わせ</a>
+		<a href="<?php echo home_url('/step/'); ?>">お取引の流れ</a>
+		<a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a>
 	</div>
 
 	<div class="l-footer__map">
