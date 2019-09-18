@@ -1,0 +1,190 @@
+/*
+p-contact
+ */
+ .p-contact{
+ 	@include media-breakpoint-up(lg){
+ 		margin-top: 160px;
+ 	}
+ 	&__title{
+ 		@include media-breakpoint-up(lg){
+ 			display: none;
+ 		}
+ 		@include media-breakpoint-down(md){
+ 			display: block;
+ 			background: #000;
+ 			text-align: center;
+ 			padding: 14px 0;
+ 		}
+ 		@include media-breakpoint-down(xs){
+ 			padding: 20px 0;
+ 		}
+ 		img{
+ 			@include media-breakpoint-down(md){
+ 				height: 45px;
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				height: 30px;
+ 			}
+ 		}
+ 	}
+ 	&__hero{
+ 		position: relative;
+ 		background-repeat: no-repeat;
+ 		background-size: contain;
+ 		display: block;
+ 		@include media-breakpoint-up(lg){
+ 			@include width-center(lg);
+ 			background-image: url('./assets/img/contact/contact-hero@2x.png');
+ 			height: 240px;
+ 		}
+ 		@media (min-width: 1366px) {
+ 			width: 100%!important;
+ 			background-size: cover;
+ 		}
+ 		@include media-breakpoint-down(md){
+ 			background-image: url('./assets/img/contact/sp-contact-hero@2x.png');
+ 			height: 240px;
+ 		}
+ 		@include media-breakpoint-down(xs){
+ 			height: 100px;
+ 			background-size: cover;
+ 		}
+ 	}
+ 	&__form{
+ 		position: relative;
+ 		@include media-breakpoint-up(lg){
+ 			@include width-center(lg);
+ 		}
+ 		@media (min-width: 1366px) {
+ 			width: 906px!important;
+ 		}
+ 		h1{
+ 			margin: 0;
+ 			@include ff-gmintyo-h;
+ 			text-align: center;
+ 			color: #000;
+ 			@include media-breakpoint-up(md){
+ 				font-size: $fs-xxl;
+ 				margin-top: 47px;
+ 				margin-bottom: 60px;
+ 			}
+ 			@include media-breakpoint-down(md){
+ 				margin-top: 28px;
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				font-size: 22px;
+ 			}
+ 		}
+ 		> p{
+ 			@include ff-gmintyo-sb;
+ 			font-size: $fs-base;
+ 			text-align: center;
+ 			@include media-breakpoint-up(lg){
+ 				margin: 0 auto 15px!important;
+ 				padding: 0 230px;
+ 			}
+ 			@media (min-width: 1366px) {
+ 				width: 906px!important;
+ 				padding: 0;
+ 			}
+ 			@include media-breakpoint-down(md){
+ 				margin: 36px 0 0;
+ 				padding: 0 34px;
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				margin: 30px 0 0;
+ 				padding: 0 12px;
+ 			}
+ 		}
+ 		&-tel{
+ 			font-size: 34px!important;
+ 			@include media-breakpoint-up(lg){
+ 				margin: 0 auto 50px!important;
+ 			}
+ 			span{
+ 				font-size: $fs-base;
+ 				margin-right: 8px;
+ 			}
+ 		}
+ 		.wpcf7{
+ 			margin-top: 54px;
+ 			margin-bottom: 150px;
+ 			p{
+ 				@extend .d-lg-flex;
+ 				margin: 0 auto;
+ 				margin-bottom: 45px;
+ 				label{
+ 					@include ff-gmintyo-sb;
+ 					font-size: $fs-md;
+ 					width: 230px;
+ 					margin: 3px 0 0;
+ 					span{
+ 						@include ff-gmintyo-m;
+ 						font-size: $fs-base;
+ 						display: inline-block;
+ 						color: #D00707;
+ 						border: 1px solid #D00707;
+ 						width: 57px;
+ 						text-align: center;
+ 						margin-left: 12px;
+ 					}
+ 				}
+ 				span{
+ 					width: 100%;
+ 				}
+ 				input{
+ 					@include ff-gmintyo-sb;
+ 					font-size: $fs-md;
+ 					width: 100%;
+ 					border-radius: 0;
+ 					padding: 5px;
+ 					height: 30px;
+ 					&:focus{
+ 						outline: 0;
+ 						border-color: #000;
+ 					}
+ 				}
+ 				select{
+ 					width: 100%;
+ 					height: 30px;
+ 					&:focus{
+ 						outline: 0;
+ 						border-color: #000;
+ 					}
+ 					option:hover {
+ 						background: #000;
+ 					}
+ 				}
+ 				.wpcf7-submit{
+ 					position: absolute;
+ 					width: 355px;
+ 					height: 70px;
+ 					background: #207DFC;
+ 					color: #FFF;
+ 					text-align: center;
+ 					display: inline;
+ 					transform: translate(-50%, -50%);
+ 					left: 50%;
+ 					margin-top: 50px;
+ 					border: none;
+ 				}
+ 			}
+ 			.wpcf7-not-valid-tip{
+ 					@include ff-gmintyo-m;
+ 					font-size: $fs-base;
+ 					margin-top: 3px;
+ 					&:before{
+ 						content: '※';
+ 					}
+ 			}
+ 			.wpcf7-validation-errors{
+ 				position: absolute;
+ 				margin-top: 70px;
+ 				display: inline;
+ 				transform: translate(-50%, -50%);
+ 				left: 50%;
+ 				width: 70%
+ 			}
+ 		}
+ 	}
+ }
