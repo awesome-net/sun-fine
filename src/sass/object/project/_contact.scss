@@ -89,11 +89,10 @@ p-contact
  			}
  			@include media-breakpoint-down(md){
  				margin: 36px 0 0;
- 				padding: 0 34px;
  			}
  			@include media-breakpoint-down(xs){
- 				margin: 30px 0 0;
- 				padding: 0 12px;
+ 				margin: 20px 0 0;
+ 				font-size: 12px;
  			}
  		}
  		&-tel{
@@ -101,32 +100,69 @@ p-contact
  			@include media-breakpoint-up(lg){
  				margin: 0 auto 50px!important;
  			}
+ 			@include media-breakpoint-down(md){
+ 				margin-bottom: 120px!important;
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				margin-bottom: 50px!important;
+ 			}
  			span{
  				font-size: $fs-base;
  				margin-right: 8px;
  			}
  		}
  		.wpcf7{
- 			margin-top: 54px;
- 			margin-bottom: 150px;
+ 			@include media-breakpoint-up(lg){
+ 				margin-top: 54px;
+ 				margin-bottom: 150px;
+ 			}
+ 			@include media-breakpoint-down(md){
+ 				padding: 0 34px;
+ 				margin-bottom: 150px;
+ 			}
+ 			@include media-breakpoint-down(xs){
+ 				padding: 0 12px;
+ 				margin-bottom: 0;
+ 			}
  			p{
- 				@extend .d-lg-flex;
+ 				@extend .d-md-flex;
  				margin: 0 auto;
- 				margin-bottom: 45px;
+ 				@include media-breakpoint-up(md){
+ 					margin-bottom: 45px;
+ 				}
+ 				@include media-breakpoint-down(xs){
+ 					margin-bottom: 20px;
+ 				}
  				label{
- 					@include ff-gmintyo-sb;
- 					font-size: $fs-md;
- 					width: 230px;
  					margin: 3px 0 0;
- 					span{
+ 					@include media-breakpoint-up(lg){
+ 						@include ff-gmintyo-sb;
+ 						font-size: $fs-md;
+ 						width: 230px;
+ 					}
+ 					@include media-breakpoint-down(md){
  						@include ff-gmintyo-m;
  						font-size: $fs-base;
+ 						width: 240px;
+ 					}
+ 					@include media-breakpoint-down(xs){
+ 						width: auto;
+ 						margin-bottom: 12px;
+ 					}
+ 					span{
+ 						@include ff-gmintyo-m;
  						display: inline-block;
  						color: #D00707;
  						border: 1px solid #D00707;
  						width: 57px;
  						text-align: center;
  						margin-left: 12px;
+ 						@include media-breakpoint-up(lg){
+ 							font-size: $fs-base;
+ 						}
+ 						@include media-breakpoint-down(md){
+ 							font-size: 12px;
+ 						}
  					}
  				}
  				span{
@@ -144,46 +180,80 @@ p-contact
  						border-color: #000;
  					}
  				}
- 				select{
- 					width: 100%;
- 					height: 30px;
+ 				textarea{
+ 					@include ff-gmintyo-sb;
+ 					font-size: $fs-md;
+ 					height: 310px;
  					&:focus{
  						outline: 0;
  						border-color: #000;
  					}
- 					option:hover {
- 						background: #000;
- 					}
  				}
  				.wpcf7-submit{
- 					position: absolute;
- 					width: 355px;
- 					height: 70px;
+ 					@include ff-gmintyo-sb;
  					background: #207DFC;
- 					color: #FFF;
  					text-align: center;
- 					display: inline;
- 					transform: translate(-50%, -50%);
- 					left: 50%;
- 					margin-top: 50px;
  					border: none;
+ 					@include media-breakpoint-up(md){
+ 						font-size: $fs-md;
+ 						position: absolute;
+ 						width: 355px;
+ 						height: 70px;
+ 						color: #FFF;
+ 						text-align: center;
+ 						display: inline;
+ 						transform: translate(-50%, -50%);
+ 						left: 50%;
+ 						margin-top: 50px;
+ 					}
+ 					@include media-breakpoint-down(xs){
+ 						font-size: $fs-md;
+ 						height: 70px;
+ 						color: #FFF;
+ 						margin-top: 10px;
+ 					}
  				}
  			}
  			.wpcf7-not-valid-tip{
- 					@include ff-gmintyo-m;
+ 				@include ff-gmintyo-m;
+ 				margin-top: 3px;
+ 				color: #D00707;
+ 				@include media-breakpoint-up(lg){
  					font-size: $fs-base;
- 					margin-top: 3px;
- 					&:before{
- 						content: '※';
- 					}
+ 				}
+ 				@include media-breakpoint-down(md){
+ 					font-size: 12px;
+ 				}
+ 				&:before{
+ 					content: '※';
+ 				}
+ 			}
+ 			.wpcf7-mail-sent-ng{
+ 				@include media-breakpoint-up(md){
+ 					position: absolute;
+ 					margin-top: 70px;
+ 					display: inline;
+ 					transform: translate(-50%, -50%);
+ 					left: 50%;
+ 					width: 70%
+ 				}
+ 				@include media-breakpoint-down(xs){
+ 					margin: 0 0 30px;
+ 				}
  			}
  			.wpcf7-validation-errors{
- 				position: absolute;
- 				margin-top: 70px;
- 				display: inline;
- 				transform: translate(-50%, -50%);
- 				left: 50%;
- 				width: 70%
+ 				display: none!important;
+ 				@include media-breakpoint-up(md){
+ 					position: absolute;
+ 					margin-top: 70px;
+ 					display: inline;
+ 					transform: translate(-50%, -50%);
+ 					left: 50%;
+ 					width: 70%
+ 				}
+ 				@include media-breakpoint-down(xs){
+ 					margin: 0 0 30px;
+ 				}
  			}
  		}
  	}

@@ -23,7 +23,7 @@ get_header(); ?>
 
 		<section class="p-contact__form">
 			<h1>お問い合わせ</h1>
-			<p>お問い合わせはお電話<br>または問い合わせフォームから受付しております。</p>
+			<p>お問い合わせについてはお電話<br>または問い合わせフォームから受付しております。</p>
 			<p class="p-contact__form-tel"><span>電話.</span>079-424-3338</p>
 			<?php echo do_shortcode( '[contact-form-7 id="163" title="お問い合わせ"]' ); ?>
 		</section>
