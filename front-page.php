@@ -82,7 +82,7 @@ get_header(); ?>
 				wp_reset_postdata();
 				?>
 			</div>
-			<div class="top-blog__more"><a href="<?php echo home_url('/blog/'); ?>" target="" class="top-blog__button-cont">もっとみる</a></div>
+			<div class="top-blog__more"><a href="<?php echo home_url('/repair/'); ?>" target="" class="top-blog__button-cont">もっとみる</a></div>
 		</section>
 
 	</main><!-- #main -->

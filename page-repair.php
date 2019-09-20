@@ -15,17 +15,33 @@
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main p-repair">
-		<session class="p-business__title">
+		<session class="p-repair__title">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/tb-top-banner-logo.svg" alt="タイトル画像：サンファイン">
 		</session>
 
-		<session class="p-business__hero"></session>
+		<session class="p-repair__hero"></session>
 
-		<session class="p-business__cont">
+		<section class="p-repair__cont">
 			<h1>修整例</h1>
-			<?php get_template_part('template-parts/object/business/business', 'list'); ?>
-			<div class="link"><a href="<?php echo home_url('/blog/'); ?>">修整例</a></div>
-		</session>
+			<div class="p-repair__list">
+				<?php
+				$args = array(
+					'post_type'      => 'post',
+					'posts_per_page' => '3',
+					'no_found_rows'  => true,  //ページャーを使う時はfalseに。
+				);
+
+				$the_query = new WP_Query($args);
+				if ($the_query->have_posts()) :
+					while ($the_query->have_posts()) : $the_query->the_post();
+						get_template_part('template-parts/content/content', get_post_format());
+
+					endwhile;
+				endif;
+				wp_reset_postdata();
+				?>
+			</div>
+		</section>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
