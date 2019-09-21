@@ -52,9 +52,9 @@ p-step
  	}
  	&__cont{
  		position: relative;
+ 		@extend .d-lg-block;
  		@include media-breakpoint-up(lg){
  			@include width-center(lg);
- 			padding: 0 100%;
  		}
  		@media (min-width: 1366px) {
  			width: 1092px!important;
@@ -68,19 +68,19 @@ p-step
  			position: absolute;
  			left: 50%;
  			display: inline;
- 			transform: translate(-50%, -50%);
  			color: #000;
  			-webkit-writing-mode: vertical-rl;
  			-ms-writing-mode: tb-rl;
  			writing-mode: vertical-rl;
  			letter-spacing: 8px;
  			@include media-breakpoint-up(lg){
- 				top: 180px;
+ 				transform: translate(-50%, -280px);
  			}
  			@include media-breakpoint-up(md){
  				font-size: $fs-xxl;
  			}
  			@include media-breakpoint-down(md){
+ 				transform: translate(-50%, -50%);
  				top: 140px;
  			}
  			@include media-breakpoint-down(xs){

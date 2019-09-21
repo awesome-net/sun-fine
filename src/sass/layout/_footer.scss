@@ -129,12 +129,12 @@ l-footer
  				position: absolute;
  				top: 300px;
  				left: 50%;
-				transform: translate(-50%, 0%);
+ 				transform: translate(-50%, 0%);
  			}
  			@include media-breakpoint-down(xs){
  				top: 280px;
  				left: 50%;
-				transform: translate(-50%, 0%);
+ 				transform: translate(-50%, 0%);
  			}
  			ul{
  				@extend .m-0;
@@ -162,9 +162,35 @@ l-footer
  						margin-right: 12px;
  						font-size: 12px;
  					}
- 					&:nth-child(3){
+ 				}
+ 			}
+ 			.menu{
+ 				> li{
+ 					&:nth-child(2){
+ 						position: relative;
+ 						@include media-breakpoint-up(lg){
+ 							margin-right: 120px;
+ 						}
+ 						@include media-breakpoint-down(md){
+ 							margin-right: 200px;
+ 						}
+ 						@include media-breakpoint-down(xs){
+ 							margin-right: 100px;
+ 						}
  						.sub-menu{
  							@extend .d-block;
+ 							position: absolute;
+ 							@include media-breakpoint-up(lg){
+ 								height: 200px;
+ 								left: 40px;
+ 							}
+ 							@include media-breakpoint-down(md){
+ 								height: 200px;
+ 								left: 60px;
+ 							}
+ 							@include media-breakpoint-down(xs){
+ 								left: 30px;
+ 							}
  							li{
  								list-style-type: none;
  								&:before{
@@ -201,6 +227,20 @@ l-footer
  		}
  		@include media-breakpoint-down(xs){
  			font-size: $fs-xs;
+ 		}
+ 	}
+ 	&__scroll-button{
+ 		a{
+ 			position: fixed;
+ 			display: block;
+ 			@include media-breakpoint-up(lg){
+ 				right:50px;
+ 				bottom:50px;
+ 			}
+ 			@include media-breakpoint-down(md){
+ 				right: 20px;
+ 				bottom: 20px;
+ 			}
  		}
  	}
  }

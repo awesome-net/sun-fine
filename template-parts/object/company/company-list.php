@@ -7,7 +7,7 @@
 			<li>
 				<h2><?php echo $row['title']; ?></h2>
 				<div class="textarea">
-					<?php if($i == 5){ ?>
+					<?php if($i == 6){ ?>
 						<a href="mailto:<?php echo $row['text']; ?>"><?php echo $row['text']; ?></a>
 					<?php }else{ ?>
 						<?php echo $row['text']; ?>

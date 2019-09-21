@@ -54,6 +54,7 @@ p-repair
  	}
  	&__cont{
  		position: relative;
+ 		@extend .d-lg-block;
  		@include media-breakpoint-up(lg){
  			@include width-center(lg);
  		}
@@ -72,11 +73,12 @@ p-repair
  			writing-mode: vertical-rl;
  			letter-spacing: 8px;
  			@include media-breakpoint-up(lg){
- 				font-size: $fs-xxl;
  				transform: translate(-50%, -250px);
  			}
- 			@include media-breakpoint-down(md){
+ 			@include media-breakpoint-up(md){
  				font-size: $fs-xxl;
+ 			}
+ 			@include media-breakpoint-down(md){
  				transform: translate(-50%, 30px);
  			}
  			@include media-breakpoint-down(xs){
@@ -91,8 +93,8 @@ p-repair
  		@extend .flex-lg-wrap;
  		@include media-breakpoint-up(lg){
  			@include width-center(lg);
- 			margin: 0;
- 			margin-top: 300px;
+ 			margin: 0!important;
+ 			margin-top: 300px!important;
  			padding: 0 137px;
  		}
  		@media (min-width: 1366px) {

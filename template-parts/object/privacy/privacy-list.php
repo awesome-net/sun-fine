@@ -9,10 +9,7 @@
 				<ul class="textarea">
 					<?php
 					foreach($row['text_cont'] as $list){
-						if($list['text_1']) echo '<li>'.$list['text_1'].'</li>';
-						if($list['text_2']) echo '<li>'.$list['text_2'].'</li>';
-						if($list['text_3']) echo '<li>'.$list['text_3'].'</li>';
-						if($list['text_4']) echo '<li>'.$list['text_4'].'</li>';
+						echo '<li>'.$list['text'].'</li>';
 					}
 					?>
 				</ul>

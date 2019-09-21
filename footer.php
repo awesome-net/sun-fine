@@ -41,6 +41,10 @@
 	<div class="l-footer__copyright">
 		<div>Copyright Sun fine. All Rights Reserved.</div>
 	</div>
+
+	<div class="l-footer__scroll-button">
+		<a id="scroll_top" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer/reel-top-normal.svg" alt="アイコン：トップへ戻る"></a>
+	</div>
 </footer>
 
 <?php wp_footer(); ?>

@@ -42,6 +42,8 @@ module.exports = {
       // bootstrap
       'src/js/popper.js',
       'src/js/bootstrap.js',
+      //scroll to top
+      'src/js/scrolltotop.js',
 
 		]
 	},

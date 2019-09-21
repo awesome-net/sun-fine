@@ -144,14 +144,14 @@ p-privacy
  				> li{
  					margin-bottom: 13px;
  				}
- 				@for $i from 2 through 4 {
- 					> li:nth-child(#{$i}) {
- 						&:before{
- 							content: url('./assets/img/privacy/heading01.svg');
- 							margin-right: 9px;
- 						}
- 					}
- 				}
+ 				//@for $i from 2 through 4 {
+ 					//> li:nth-child(#{$i}) {
+ 						//&:before{
+ 							//content: url('./assets/img/privacy/heading01.svg');
+ 							//margin-right: 9px;
+ 						//}
+ 					//}
+ 				//}
  				@include media-breakpoint-up(lg){
  					font-size: $fs-base;
  					margin: 15px 18px 30px;
@@ -162,6 +162,19 @@ p-privacy
  				}
  				@include media-breakpoint-down(xs){
  					margin: 15px 0 30px 18px;
+ 				}
+ 			}
+ 			&:nth-child(5){
+ 				.textarea{
+ 					> li:nth-child(2){
+ 						margin-left: 1.5em;
+ 					}
+ 					> li:nth-child(3){
+ 						margin-left: 3em;
+ 					}
+ 					> li:nth-child(5){
+ 						margin-left: 1.5em;
+ 					}
  				}
  			}
  		}

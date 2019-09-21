@@ -54,9 +54,11 @@ p-contact
  		position: relative;
  		@include media-breakpoint-up(lg){
  			@include width-center(lg);
+ 			padding: 0 230px;
  		}
  		@media (min-width: 1366px) {
  			width: 906px!important;
+ 			padding: 0;
  		}
  		h1{
  			margin: 0;
