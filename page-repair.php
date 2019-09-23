@@ -15,11 +15,11 @@
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main p-repair">
-		<session class="p-repair__title">
+		<section class="p-repair__title">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/tb-top-banner-logo.svg" alt="タイトル画像：サンファイン">
-		</session>
+		</section>
 
-		<session class="p-repair__hero"></session>
+		<section class="p-repair__hero"></section>
 
 		<section class="p-repair__cont">
 			<h1>修整例</h1>

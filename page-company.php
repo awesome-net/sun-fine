@@ -15,16 +15,16 @@
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main p-company">
-		<session class="p-company__title">
+		<section class="p-company__title">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/tb-top-banner-logo.svg" alt="タイトル画像：サンファイン">
-		</session>
+		</section>
 
-		<session class="p-company__hero"></session>
+		<section class="p-company__hero"></section>
 
-		<session class="p-company__cont">
+		<section class="p-company__cont">
 			<h1>会社案内</h1>
 			<?php get_template_part('template-parts/object/company/company', 'list'); ?>
-		</session>
+		</section>
 	</main><!-- #main -->
 </div><!-- #primary -->
 

@@ -15,11 +15,11 @@
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main p-contact">
-		<session class="p-contact__title">
+		<section class="p-contact__title">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/tb-top-banner-logo.svg" alt="タイトル画像：サンファイン">
-		</session>
+		</section>
 
-		<session class="p-contact__hero"></session>
+		<section class="p-contact__hero"></section>
 
 		<section class="p-contact__form">
 			<h1>お問い合わせ</h1>

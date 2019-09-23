@@ -15,17 +15,17 @@
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main p-business">
-		<session class="p-business__title">
+		<section class="p-business__title">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/tb-top-banner-logo.svg" alt="タイトル画像：サンファイン">
-		</session>
+		</section>
 
-		<session class="p-business__hero"></session>
+		<section class="p-business__hero"></section>
 
-		<session class="p-business__cont">
+		<section class="p-business__cont">
 			<h1>業務内容</h1>
 			<?php get_template_part('template-parts/object/business/business', 'list'); ?>
 			<div class="link"><a href="<?php echo home_url('/repair/'); ?>">修整例</a></div>
-		</session>
+		</section>
 	</main><!-- #main -->
 </div><!-- #primary -->
 

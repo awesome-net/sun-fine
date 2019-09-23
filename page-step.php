@@ -15,16 +15,16 @@
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main p-step">
-		<session class="p-step__title">
+		<section class="p-step__title">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/tb-top-banner-logo.svg" alt="タイトル画像：サンファイン">
-		</session>
+		</section>
 
-		<session class="p-step__hero"></session>
+		<section class="p-step__hero"></section>
 
-		<session class="p-step__cont">
+		<section class="p-step__cont">
 			<h1>お取引の流れ</h1>
 			<?php get_template_part('template-parts/object/step/step', 'list'); ?>
-		</session>
+		</section>
 	</main><!-- #main -->
 </div><!-- #primary -->
 

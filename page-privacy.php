@@ -15,19 +15,19 @@
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main p-privacy">
-		<session class="p-privacy__title">
+		<section class="p-privacy__title">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/hero/tb-top-banner-logo.svg" alt="タイトル画像：サンファイン">
-		</session>
+		</section>
 
-		<session class="p-privacy__hero"></session>
+		<section class="p-privacy__hero"></section>
 
-		<session class="p-privacy__cont">
+		<section class="p-privacy__cont">
 			<h1>プライバシーポリシー</h1>
 			<p>
 				株式会社サンファイン（以下，「当社」といいます。）は，本ウェブサイト上で提供するサービス（以下,「本サービス」といいます。）における，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
 			</p>
 			<?php get_template_part('template-parts/object/privacy/privacy', 'list'); ?>
-		</session>
+		</section>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
