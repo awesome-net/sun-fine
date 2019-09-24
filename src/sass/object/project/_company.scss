@@ -59,9 +59,6 @@ p-company
  		@media (min-width: 1366px) {
  			width: 1092px!important;
  		}
- 		@include media-breakpoint-down(md){
- 			padding: 0 100%;
- 		}
  		h1{
  			margin: 0;
  			@include ff-gmintyo-h;
