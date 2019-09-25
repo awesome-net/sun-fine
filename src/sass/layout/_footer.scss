@@ -52,12 +52,16 @@ l-footer
  	&__cont{
  		position: relative;
  		@include media-breakpoint-up(lg){
+ 			@include width-center(lg);
  			height: 280px;
+ 		}
+ 		@media (min-width: 1366px) {
+ 			width: 1092px!important;
  		}
  		@include media-breakpoint-down(md){
  			padding: 54px 124px 20px;
  			text-align: center;
- 			height: 500px;
+ 			height: 550px;
  		}
  		@include media-breakpoint-down(xs){
  			padding: 47px 12px 20px;
@@ -69,7 +73,6 @@ l-footer
  			@include media-breakpoint-up(lg){
  				position: absolute;
  				top: 50px;
- 				left: 137px;
  			}
  			img{
  				@include media-breakpoint-down(md){
@@ -123,7 +126,7 @@ l-footer
  			@include media-breakpoint-up(lg){
  				position: absolute;
  				top: 33px;
- 				right: 125px;
+ 				right: 0;
  			}
  			@include media-breakpoint-down(md){
  				position: absolute;
@@ -166,31 +169,9 @@ l-footer
  			}
  			.menu{
  				> li{
- 					&:nth-child(2){
- 						position: relative;
- 						@include media-breakpoint-up(lg){
- 							margin-right: 120px;
- 						}
- 						@include media-breakpoint-down(md){
- 							margin-right: 200px;
- 						}
- 						@include media-breakpoint-down(xs){
- 							margin-right: 100px;
- 						}
+ 					&:nth-child(3){
  						.sub-menu{
  							@extend .d-block;
- 							position: absolute;
- 							@include media-breakpoint-up(lg){
- 								height: 200px;
- 								left: 40px;
- 							}
- 							@include media-breakpoint-down(md){
- 								height: 200px;
- 								left: 60px;
- 							}
- 							@include media-breakpoint-down(xs){
- 								left: 30px;
- 							}
  							li{
  								list-style-type: none;
  								&:before{
@@ -201,6 +182,11 @@ l-footer
  							a{
  								color: #B1B1B1;
  							}
+ 						}
+ 					}
+ 					&:last-child{
+ 						@include media-breakpoint-up(lg){
+ 							margin-right: 0;
  						}
  					}
  					a{
@@ -217,16 +203,19 @@ l-footer
  		@include media-breakpoint-up(lg){
  			position: absolute;
  			bottom: 15px;
- 			right: 137px;
+ 			right: 0;
  			font-size: $fs-xs;
  		}
  		@include media-breakpoint-down(md){
- 			padding-bottom: 20px;
- 			text-align: center;
+ 			position: absolute;
+ 			bottom: 15px;
+ 			left: 50%;
+ 			transform: translate(-50%, 0%);
  			font-size: 12px;
  		}
  		@include media-breakpoint-down(xs){
  			font-size: $fs-xs;
+ 			width: 100%;
  		}
  	}
  	&__scroll-button{
