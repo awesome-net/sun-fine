@@ -36,10 +36,10 @@
 		<div class="l-footer__cont-menu">
 			<?php get_template_part('template-parts/object/footer-nav'); ?>
 		</div>
+	</div>
 
-		<div class="l-footer__copyright">
-			<div>Copyright Sun fine. All Rights Reserved.</div>
-		</div>
+	<div class="l-footer__copyright">
+		<div>Copyright Sun fine. All Rights Reserved.</div>
 	</div>
 
 	<div class="l-footer__scroll-button">

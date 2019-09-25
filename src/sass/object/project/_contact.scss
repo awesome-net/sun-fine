@@ -37,7 +37,7 @@ p-contact
  			background-image: url('./assets/img/contact/contact-hero@2x.png');
  			height: 240px;
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 100%!important;
  			background-size: cover;
  		}
@@ -56,7 +56,7 @@ p-contact
  			@include width-center(lg);
  			padding: 0 230px;
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 906px!important;
  			padding: 0;
  		}
@@ -85,7 +85,7 @@ p-contact
  				margin: 0 auto 15px!important;
  				padding: 0 230px;
  			}
- 			@media (min-width: 1366px) {
+ 			@media (min-width: $base-width) {
  				width: 906px!important;
  				padding: 0;
  			}

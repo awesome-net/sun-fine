@@ -17,13 +17,13 @@ l-header
  			text-decoration: none;
  		}
  	}
- 	@media (min-width: 1366px) {
+ 	@media (min-width: $base-width) {
  		width: 100%!important;
  	}
  	&__inner{
 		@extend .d-lg-flex; //lg以上ではflexboxを使用
 		@extend .justify-content-lg-between;
-		@media (min-width: 1366px) {
+		@media (min-width: $base-width) {
 			width: 1092px;
 			margin: 0 auto;
 		}

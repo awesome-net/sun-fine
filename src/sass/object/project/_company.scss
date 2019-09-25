@@ -37,7 +37,7 @@ p-company
  			background-image: url('./assets/img/company/company-hero@2x.png');
  			height: 240px;
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 100%!important;
  			background-size: cover;
  		}
@@ -56,7 +56,7 @@ p-company
  		@include media-breakpoint-up(lg){
  			@include width-center(lg);
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 1092px!important;
  		}
  		h1{
@@ -92,7 +92,7 @@ p-company
  			margin-top: 250px!important;
  			padding: 0 137px;
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 1092px!important;
  			margin: 250px auto 0!important;
  			padding: 0;

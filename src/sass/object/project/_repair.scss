@@ -38,7 +38,7 @@ p-repair
  			background-image: url('./assets/img/repair/repair-hero@2x.png');
  			height: 240px;
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 100%!important;
  			background-size: cover;
  		}
@@ -58,7 +58,7 @@ p-repair
  		@include media-breakpoint-up(lg){
  			@include width-center(lg);
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 1092px!important;
  		}
  		h1{
@@ -97,7 +97,7 @@ p-repair
  			margin-top: 300px!important;
  			padding: 0 137px;
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 1092px!important;
  			margin: 300px auto 0!important;
  			padding: 0;

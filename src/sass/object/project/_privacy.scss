@@ -37,7 +37,7 @@ p-privacy
  			background-image: url('./assets/img/privacy/privacy-policy-hero@2x.png');
  			height: 240px;
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 100%!important;
  			background-size: cover;
  		}
@@ -55,7 +55,7 @@ p-privacy
  		@include media-breakpoint-up(lg){
  			@include width-center(lg);
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 1092px!important;
  		}
  		h1{
@@ -81,7 +81,7 @@ p-privacy
  				margin: 36px auto 45px!important;
  				padding: 0 137px;
  			}
- 			@media (min-width: 1366px) {
+ 			@media (min-width: $base-width) {
  				width: 1092px!important;
  				padding: 0;
  			}
@@ -100,7 +100,7 @@ p-privacy
  			margin: 36px auto 80px!important;
  			padding: 0 137px;
  		}
- 		@media (min-width: 1366px) {
+ 		@media (min-width: $base-width) {
  			width: 1092px!important;
  			padding: 0;
  		}
