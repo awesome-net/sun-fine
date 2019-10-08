@@ -3,6 +3,70 @@
     "title": "TOPページ",
     "fields": [
         {
+            "key": "field_5d9c0eef8e225",
+            "label": "TOP 画像",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d9c0f018e226",
+            "label": "PC画像",
+            "name": "top_pc",
+            "type": "image",
+            "instructions": "パソコンで表示した際のTOP画像です。\r\n比率横長の設定をお願いいたします。\r\n納品時に設定した画像のサイズは「2732px x 1536px」となります。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d9c0f138e227",
+            "label": "スマホ表示画像",
+            "name": "top_sp",
+            "type": "image",
+            "instructions": "スマホで表示した際のTOP画像です。\r\n比率横長の設定をお願いいたします。\r\n納品時に設定した画像のサイズは「640px x 1137px」となります。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5d6e7ea7c38cb",
             "label": "サンファインとは",
             "name": "",
@@ -239,5 +303,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1567663974
+    "modified": 1570507984
 }

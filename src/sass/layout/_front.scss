@@ -4,25 +4,20 @@ top-hero
 .top-hero{
 	position: relative;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	@include media-breakpoint-up(lg){
 		@include width-center(lg);
-		background-image: url('./assets/img/home/hero/top-banner@2x.png');
 		height: 768px;
 		z-index: 9999;
 	}
 	@media (min-width: $base-width) {
 		width: 100%!important;
-		background-size: cover;
 	}
 	@include media-breakpoint-down(md){
-		background-image: url('./assets/img/home/hero/tb-top-banner@2x.png');
 		height: 1024px;
 	}
 	@include media-breakpoint-down(xs){
-		background-image: url('./assets/img/home/hero/sp-top-banner@2x.png');
 		height: 568px;
-		background-size: cover;
 	}
 	&__cont{
 		position: relative;
